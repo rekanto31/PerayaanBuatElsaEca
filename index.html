@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surat Tahun Baru untuk Pacar</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        text-align: center;
+        padding: 20px;
+      }
+      .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+        display: none;
+      }
+      .card.active {
+        display: block;
+      }
+      h1 {
+        color: #e74c3c;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.6;
+      }
+      .emoji {
+        font-size: 24px;
+      }
+      img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-top: 20px;
+      }
+      button {
+        background-color: #e74c3c;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+      button:hover {
+        background-color: #c0392b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card active" id="card1">
+      <h1>Selamat Tahun Baru, Sayang! 🎉</h1>
+      <p>
+        Semoga tahun ini membawa kebahagiaan, kesuksesan, dan cinta yang lebih
+        besar untuk kita berdua. 💖
+      </p>
+      <p class="emoji">❤️❤️❤️</p>
+
+      <button onclick="nextCard()">Next</button>
+    </div>
+
+    <div class="card" id="card2">
+      <h1>Terima Kasih atas Segalanya 🙏</h1>
+      <p>
+        Terima kasih telah menjadi bagian dari hidupku dan membuat setiap hari
+        lebih berarti. Aku sangat mencintaimu. 💕
+      </p>
+      <p class="emoji">💕💕💕</p>
+
+      <button onclick="nextCard()">Next</button>
+    </div>
+
+    <div class="card" id="card3">
+      <h1>Mari Menciptakan Kenangan Indah 🌟</h1>
+      <p>
+        Mari kita isi tahun ini dengan petualangan, tawa, dan cinta yang tak
+        terbatas. Aku tak sabar untuk menghabiskan waktu bersamamu. 💑
+      </p>
+      <p class="emoji">💖💖💖</p>
+
+      <button onclick="nextCard()">Next</button>
+    </div>
+
+    <div class="card" id="card4">
+      <h1>Selamat Tahun Baru Lagi! 🎊</h1>
+      <p>
+        Semoga tahun ini menjadi tahun terbaik untuk kita berdua. Aku
+        mencintaimu lebih dari apapun. 💘
+      </p>
+      <p class="emoji">💘💘💘</p>
+
+      <button onclick="nextCard()">Kembali ke Awal</button>
+    </div>
+
+    <script>
+      let currentCard = 1;
+
+      function nextCard() {
+        document
+          .getElementById(`card${currentCard}`)
+          .classList.remove("active");
+        currentCard++;
+        if (currentCard > 4) {
+          currentCard = 1;
+        }
+        document.getElementById(`card${currentCard}`).classList.add("active");
+      }
+    </script>
+  </body>
+</html>
